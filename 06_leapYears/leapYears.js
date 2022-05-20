@@ -1,4 +1,16 @@
-const leapYears = function() {
+const leapYears = function(year) {
+
+    if(typeof(year) != "number" ||
+        year < 0
+    ){
+        return 'ERROR';
+    }
+
+    return (
+        year % 400 == 0 ||
+        (year % 4 == 0 && year % 100 != 0)
+    );
+
 
 };
 
